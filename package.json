@@ -1,0 +1,20 @@
+{
+  "name": "hoganify",
+  "version": "1.0.0",
+  "description": "Browserify transform for precompiling Mustache templates using Hogan",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "browserify",
+    "hogan",
+    "mustache"
+  ],
+  "author": "Frode Danielsen <frode@e5r.no>",
+  "license": "ISC",
+  "dependencies": {
+    "hogan.js": "^3.0.2",
+    "through2": "^0.5.1"
+  }
+}
