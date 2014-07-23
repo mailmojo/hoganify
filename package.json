@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "Browserify transform for precompiling Mustache templates using Hogan",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eliksir/hoganify.git"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -12,7 +16,7 @@
     "mustache"
   ],
   "author": "Frode Danielsen <frode@e5r.no>",
-  "license": "ISC",
+  "license": "BSD",
   "dependencies": {
     "hogan.js": "^3.0.2",
     "through2": "^0.5.1"

@@ -24,7 +24,7 @@ module.exports = function hoganify (file, options) {
             compiled = '';
 
         compiled += "var Hogan = require('hogan.js');\n";
-        if (options.liveCompile) {
+        if (options.live) {
             compiled += "module.exports = Hogan.compile(" + text + ");";
         }
         else {
