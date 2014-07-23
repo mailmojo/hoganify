@@ -12,10 +12,12 @@
   },
   "keywords": [
     "browserify",
+    "transform",
+    "browserify-transform",
     "hogan",
     "mustache"
   ],
-  "author": "Frode Danielsen <frode@e5r.no>",
+  "author": "Frode Danielsen",
   "license": "BSD",
   "dependencies": {
     "hogan.js": "^3.0.2",
