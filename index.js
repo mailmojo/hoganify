@@ -3,7 +3,7 @@ var
     path = require('path'),
     through = require('through2');
 
-var extensions = ['.hogan', '.mustache'];
+var extensions = ['.hogan', '.mustache', '.html'];
 
 module.exports = function hoganify (file, options) {
     if (extensions.indexOf(path.extname(file)) === -1) {
