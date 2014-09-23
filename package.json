@@ -1,6 +1,6 @@
 {
   "name": "hoganify",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Browserify transform for precompiling Mustache templates using Hogan",
   "main": "index.js",
   "repository": {
