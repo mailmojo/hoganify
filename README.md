@@ -59,6 +59,10 @@ Or again, through grunt-browserify:
 Changelog
 ---------
 
+### 0.1.2
+
+-   Picks up .ms extension
+
 ### 0.1.1
 
 -   Minor README update
