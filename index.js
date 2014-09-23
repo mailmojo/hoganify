@@ -3,9 +3,12 @@ var
     path = require('path'),
     through = require('through2');
 
-var extensions = ['.hogan', '.mustache'];
+var defaultExtensions = ['.hogan', '.mustache', '.ms'];
 
 module.exports = function hoganify (file, options) {
+    var extensions = defaultExtensions.concat(options.ext &&
+                                              options.ext.split(',') || []);
+
     if (extensions.indexOf(path.extname(file)) === -1) {
         return through();
     }

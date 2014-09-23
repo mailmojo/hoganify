@@ -3,7 +3,7 @@ hoganify
 
 [Mustache](http://mustache.github.io/) precompiler transform plugin for
 [Browserify](https://github.com/substack/node-browserify), using
-[Hoganjjs](https://github.com/twitter/hogan.js) as the compiler. Highly
+[Hogan.js](https://github.com/twitter/hogan.js) as the compiler. Highly
 inspired by [hbsfy](https://github.com/epeli/node-hbsfy).
 
 Compiles Mustache templates to CommonJS modules. The compiled templates
@@ -24,9 +24,8 @@ Then use it as Browserify transform module with `-t`:
 
     browserify -t hoganify main.js > bundle.js
 
-Or through
-[gruntbbrowserify](https://github.com/jmreidy/grunt-browserify) using
-the `transform` option:
+Or through [grunt-browserify](https://github.com/jmreidy/grunt-browserify)
+using the `transform` option:
 
     browserify: {
       options: {
@@ -34,8 +33,8 @@ the `transform` option:
       }
     }
 
-In your CommonJS code you simply require files with `.hogan` or
-`.mustache` extensions:
+In your CommonJS code you simply require files with `.hogan`, `.mustache`
+or `.ms` extensions:
 
     var template = require('widget.mustache');
     document.body.innerHTML = template.render({ title: "Hulk" });
@@ -56,8 +55,25 @@ Or again, through grunt-browserify:
       }
     }
 
+If you want to support other extensions than the default ones, you can use the
+`--ext` option with one or more comma separated extensions:
+
+    browserify -t [ hoganify --ext .html,.hg ] main.js > bundle.js
+
+Or similarly in grunt-browserify:
+
+    browserify: {
+      options: {
+        transform: [['hoganify', { ext: '.html,.hg' }]]
+      }
+    }
+
 Changelog
 ---------
+
+### 0.2.0
+
+- Support for `--ext` option
 
 ### 0.1.1
 
